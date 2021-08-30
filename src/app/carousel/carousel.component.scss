@@ -1,0 +1,37 @@
+.product-item {
+  .product-item-content {
+    border: 1px solid var(--surface-d);
+    border-radius: 3px;
+    margin: 0.3rem;
+    text-align: center;
+    padding: 2rem 0;
+    background-color: yellow;
+  }
+
+  .product-image {
+    width: 50%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    background-color: red;
+  }
+}
+
+h5 {
+  white-space: pre-wrap;
+}
+
+.image-size {
+  height: 200px;
+}
+
+.div-carousel {
+  display: flex;
+}
+
+.carousel-content {
+  display: flex;
+}
+
+.carousel-button {
+  display: flex;
+  justify-content: center;
+}

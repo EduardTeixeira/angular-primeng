@@ -1,0 +1,42 @@
+<div *ngIf="showCarousel">
+
+  <p-carousel [value]="cars" [showIndicators]="true" [showNavigators]="true" #carousel
+    (mouseclick)="carousel.startAutoplay()" [circular]="true" (onPage)="stepCarousel($event)">
+
+    <!--
+    <p-carousel class="ui-carousel-big" [headerText]="" [value]="carouselContent" [numVisible]="1" responsive="true"
+    [pageLinks]="carouselContent.length+1" [breakpoint]="1024" #carousel (onPage)="stepCarousel($event)">
+    -->
+
+    <ng-template let-car pTemplate="item">
+
+      <div class="product-item">
+
+        <div class="product-item-content">
+
+          <img class="image-size" src="{{car.img}}" alt="">
+
+          <h4 class="p-mb-1">{{car.title}}</h4>
+
+          <h5 class="p-mt-0 p-mb-3">{{car.text}}</h5>
+
+        </div>
+
+      </div>
+
+    </ng-template>
+
+  </p-carousel>
+
+  <div class="carousel-button">
+
+    <p-button id="btnCloseCarousel" label="Pular" (onClick)="changeShowCarousel()"></p-button>
+
+  </div>
+
+</div>
+
+
+<div *ngIf="!showCarousel">
+  <h1>Escondeu o Carousel</h1>
+</div>

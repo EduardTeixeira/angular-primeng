@@ -1,0 +1,70 @@
+<div>
+  <button pButton type="button" label="Click"></button>
+  <p-button label="Click"></p-button>
+</div>
+
+<div>
+  <button pButton type="button" icon="pi pi-check" iconPos="left"></button>
+  <p-button label="Click" icon="pi pi-check" iconPos="left"></p-button>
+</div>
+
+<div>
+  <button pButton type="button" label="Click" (click)="handleClick($event)"></button>
+  <p-button label="Click" (onClick)="handleClick($event)"></p-button>
+</div>
+
+<div>
+  <button pButton type="button" class="p-button-info"></button>
+  <button pButton type="button" label="Primary"></button>
+  <button pButton type="button" label="Secondary" class="p-button-secondary"></button>
+  <button pButton type="button" label="Success" class="p-button-success"></button>
+  <button pButton type="button" label="Info" class="p-button-info"></button>
+  <button pButton type="button" label="Warning" class="p-button-warning"></button>
+  <button pButton type="button" label="Help" class="p-button-help"></button>
+  <button pButton type="button" label="Danger" class="p-button-danger"></button>
+</div>
+
+<div>
+  <button pButton type="button" label="Submit" class="p-button-text"></button>
+  <button pButton type="button" icon="pi pi-check" class="p-button-text"></button>
+  <button pButton type="button" label="Cancel" icon="pi pi-times" class="p-button-text"></button>
+  <button pButton type="button" label="Search" icon="pi pi-search" iconPos="right"
+    class="p-button-text p-button-text"></button>
+</div>
+
+<div>
+  <button pButton type="button" class="p-button-raised p-button-rounded"></button>
+</div>
+
+<div>
+  <button pButton type="button" label="Primary" class="p-button-outlined"></button>
+</div>
+
+<div>
+  <button pButton type="button" label="Link" class="p-button-link"></button>
+</div>
+
+<div>
+  <button pButton type="button" label="Emails" badge="8"></button>
+  <button pButton type="button" label="Messages" icon="pi pi-users" class="p-button-warning" badge="8"
+    badgeClass="p-badge-info"></button>
+</div>
+
+<div>
+  <span class="p-buttonset">
+    <button pButton type="button" label="Save" icon="pi pi-check"></button>
+    <button pButton type="button" label="Delete" icon="pi pi-trash"></button>
+    <button pButton type="button" label="Cancel" icon="pi pi-times"></button>
+  </span>
+</div>
+
+<div>
+  <button pButton type="button" label="Small" icon="pi pi-check" class="p-button-sm"></button>
+  <button pButton type="button" label="Normal" icon="pi pi-check" class="p-button"></button>
+  <button pButton type="button" label="Large" icon="pi pi-check" class="p-button-lg"></button>
+</div>
+
+<div>
+  <button pButton type="button" label="Small" icon="pi pi-check" [loading]="isLoading"></button>
+  <p-button label="Search" icon="pi pi-search" [loading]="isLoading"></p-button>
+</div>
