@@ -1,0 +1,32 @@
+p-card{
+    background: gray;
+}
+
+.sizes {
+    .p-inputtext {
+        display: block;
+        margin-bottom: .5rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.field * {
+    display: block;
+}
+
+
+:host>>>.user-form {
+    width: 30%;
+}
+
+:host>>>.p-inputtext {
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+}

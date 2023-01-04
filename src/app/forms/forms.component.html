@@ -1,0 +1,45 @@
+<p-card styleClass="user-form" class="flex">
+
+    <form [formGroup]="formGroup" (ngSubmit)="submit()" novalidate>
+
+        <h5>Forms</h5>
+
+        <div class="sizes">
+
+            <div class="field">
+                <label for="input1" class="block">Input_1</label>
+                <input id="input1" type="text" placeholder="Normal" pInputText formControlName="input1"
+                    aria-describedby="input1-help" />
+                <small id="input1-help" class="p-error block"
+                    *ngIf="formGroup.get('input1')?.invalid && formGroup.get('input1')?.dirty">
+                    Campo obrigatório.
+                </small>
+            </div>
+
+            <div class="field">
+                <label for="input2" class="block">Input_2</label>
+                <input id="input2" type="text" placeholder="Normal" pInputText formControlName="input2"
+                    aria-describedby="input2-help" />
+                <small id="input2-help" class="p-error block"
+                    *ngIf="formGroup.get('input2')?.invalid && formGroup.get('input2')?.dirty">
+                    Campo obrigatório.
+                </small>
+            </div>
+
+            <div class="field">
+                <label for="input3" class="block">Email</label>
+                <input id="input3" type="text" placeholder="Normal" pInputText formControlName="input3"
+                    aria-describedby="input3-help" />
+                <small id="input3-help" class="p-error block"
+                    *ngIf="formGroup.get('input3')?.invalid && formGroup.get('input3')?.dirty">
+                    Campo obrigatório.
+                </small>
+            </div>
+
+        </div>
+
+        <button pButton type="submit" label="Enviar" [disabled]="formGroup.invalid"></button>
+
+    </form>
+
+</p-card>
