@@ -11,23 +11,29 @@ import { CarouselModule } from 'primeng/carousel';
 import { FieldsetModule } from 'primeng/fieldset';
 import { InputTextModule } from 'primeng/inputtext';
 import { MenubarModule } from 'primeng/menubar';
+import { FileUploadModule } from 'primeng/fileupload';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ButtonsComponent } from './buttons/buttons.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { FormsComponent } from './forms/forms.component';
+import { FileUploadComponent } from './file-upload/file-upload.component';
+import { MtlsService } from './Mtls.service';
 
 @NgModule({
     declarations: [
         AppComponent,
         CarouselComponent,
         ButtonsComponent,
-        FormsComponent
+        FormsComponent,
+        FileUploadComponent
     ],
     imports: [
         CommonModule,
         BrowserModule,
+        HttpClientModule,
         AppRoutingModule,
         ButtonModule,
         CarouselModule,
@@ -37,6 +43,7 @@ import { FormsComponent } from './forms/forms.component';
         ReactiveFormsModule,
         FormsModule,
         CardModule,
+        FileUploadModule,
         BsDropdownModule.forRoot(),
         TooltipModule.forRoot(),
         ModalModule.forRoot(),
@@ -50,7 +57,9 @@ import { FormsComponent } from './forms/forms.component';
         CUSTOM_ELEMENTS_SCHEMA,
         NO_ERRORS_SCHEMA
     ],
-    providers: [],
+    providers: [
+        MtlsService
+    ],
     bootstrap: [AppComponent],
 })
 export class AppModule { }

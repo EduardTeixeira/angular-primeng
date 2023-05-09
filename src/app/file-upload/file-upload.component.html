@@ -1,0 +1,13 @@
+<h1>File-Uploads</h1>
+
+<p-fileUpload #fileUpload mode="advanced" name="files" [showUploadButton]="false" [showCancelButton]="false"
+    chooseLabel="Selecionar Arquivo" (onSelect)="onSelect($event)" (onBeforeUpload)="onBeforeUpload($event)"
+    (onBeforeSend)="onBeforeSend($event)" (onUpload)="onUpload($event)" (onError)="onError($event)">
+</p-fileUpload>
+
+<div class="col-lg-6 col-sm-6 col-xs-12">
+    <button class="btn solid no-margin btn-block" id="botao-arquivo-cobranca-enviar-arquivo" type="button"
+        (click)="uploadFile()">
+        Enviar Arquivo
+    </button>
+</div>
